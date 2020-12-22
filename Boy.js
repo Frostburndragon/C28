@@ -15,7 +15,7 @@ class Boy {
     }
 
     display(){
-        var pos =this.body.position;
+        var pos = this.body.angle;
         
         push();
         
