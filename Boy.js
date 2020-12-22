@@ -10,8 +10,6 @@ class Boy {
         this.width = 300;
         this.height = 400;
         this.image = loadImage("boy.png");
-      
-        World.add(world, this.body);
     }
 
     display(){
