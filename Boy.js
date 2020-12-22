@@ -19,7 +19,7 @@ class Boy {
         
         push();
         
-        translate(this.body.pos.x,this.body.pos.y);
+        translate(this.body.position.x, this.body.position.y);
         strokeWeight(4);
         stroke("blue");
         fill("red");
