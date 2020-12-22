@@ -1,30 +1,24 @@
-class Boy {
-    constructor(x,y) {
+class Boy{
+    constructor(x, y, width, height) {
         var options = {
-            'friction':1,
-            'density':1.5,
-            'isStatic':true
+            isStatic:true,
+            'restitution':0.8,
+            'friction':1.0,
+            'density':0.5
         }
-
         this.body = Bodies.rectangle(x, y, 50, 50, options);
-        this.width = 300;
-        this.height = 400;
+        this.width = width;
+        this.height = height;
         this.image = loadImage("boy.png");
-    }
 
-    display(){
-        var pos = this.body.angle;
-        
+      }
+      display(){
+        var angle = this.body.angle;
         push();
-        
         translate(this.body.position.x, this.body.position.y);
-        strokeWeight(4);
-        stroke("blue");
-        fill("red");
+        rotate(angle);
         imageMode(CENTER);
         image(this.image, 0, 0, this.width, this.height);
-        
         pop();
-    }
-    
-  }
+      }
+}
